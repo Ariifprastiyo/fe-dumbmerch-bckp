@@ -3,7 +3,7 @@ def repo = "git@github.com:Ariifprastiyo/fe-dumbmerch.git"
 def cred = "dumbmerch"
 def dir = "~/fe-dumbmerch"
 def server = "arif@103.176.79.201"
-def imagename = "fe-dumbmerch"
+def imagename = "dumbmerch-fe"
 def dockerusername = "ariif"
 
 pipeline {
