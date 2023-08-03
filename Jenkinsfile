@@ -14,14 +14,14 @@ pipeline {
             steps {
                 sshagent([cred]) {
                     sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-		                mkdir ${dir}
+                                mkdir ${dir}
                         cd ${dir}
-			            git init
+                                    git init
                         git remote add origin ${repo}
-			            git pull origin master
-			            git branch ${branch}
-			            git checkout ${branch}
-			            git pull origin ${branch}
+                                    git pull origin master
+                                    git branch ${branch}
+                                    git checkout ${branch}
+                                    git pull origin ${branch}
                         exit
                         EOF
                     """
@@ -62,15 +62,15 @@ pipeline {
         stage('Image push') {
             steps {
                sshagent([cred]) {
-			    sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
-				    docker tag ${imagename}:latest ${dockerusername}/${imagename}:latest
-				    docker image push ${dockerusername}/${imagename}:latest
-				    docker image rm ${dockerusername}/${imagename}:latest
-				    docker image rm ${imagename}:latest
-				    exit
+                            sh """ssh -o StrictHostKeyChecking=no ${server} << EOF
+                                    docker tag ${imagename}:latest ${dockerusername}/${imagename}:latest
+                                    docker image push ${dockerusername}/${imagename}:latest
+                                    docker image rm ${dockerusername}/${imagename}:latest
+                                    docker image rm ${imagename}:latest
+                                    exit
                     EOF
-			"""
-		        }
+                        """
+                        }
             }
         }
     }
