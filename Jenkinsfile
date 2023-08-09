@@ -2,8 +2,8 @@ def branch = "production"
 def repo = "git@github.com:Ariifprastiyo/fe-dumbmerch.git"
 def cred = "dumbmerch"
 def dir = "~/fe-dumbmerch"
-def server = "arif@103.176.79.201"
-def imagename = "dumbmerch-fe"
+def server = "arif@103.23.199.89"
+def imagename = "fe1dumbmerch"
 def dockerusername = "ariif"
 
 pipeline {
