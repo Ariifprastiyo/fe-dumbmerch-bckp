@@ -1,5 +1,5 @@
 def branch = "production"
-def repo = "git@github.com:Ariifprastiyo/fe-dumbmerchaps-bckp.git"
+def repo = "git@github.com:Ariifprastiyo/fe-dumbmerch-bckp.git"
 def cred = "dumbmerch"
 def dir = "~/fe-dumbmerch-bckp"
 def server = "ariif_prastiyo@34.125.198.99"
