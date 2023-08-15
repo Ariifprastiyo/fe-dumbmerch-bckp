@@ -6,6 +6,7 @@ def server = "ariif_prastiyo@34.125.198.99"
 def imagename = "fe-dumbmerch-bckp"
 def dockerusername = "ariif"
 
+
 pipeline {
     agent any
 
